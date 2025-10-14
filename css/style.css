@@ -1,0 +1,59 @@
+/* Arquivo: css/style.css
+  Descrição: Estilos customizados para a landing page que complementam o TailwindCSS.
+*/
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0D1117;
+    color: #F9FAFB;
+    /* Adicionando suavização de fonte para melhor legibilidade em alguns navegadores */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animação de entrada para as seções */
+.swoosh-enter {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.swoosh-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilos do Acordeão (conteúdo) */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+    padding: 0 1.5rem; /* Mantém o padding na transição */
+}
+
+/* Efeito de hover nos botões principais (Call-to-Action) */
+.cta-button {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+}
+
+/* Efeito sutil de brilho no texto destacado */
+.text-glow {
+    text-shadow: 0 0 8px currentColor;
+}
+
+/* Estilos do player de vídeo de fundo */
+.video-player {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    object-fit: cover;
+    transition: opacity 1.5s ease-in-out;
+}
