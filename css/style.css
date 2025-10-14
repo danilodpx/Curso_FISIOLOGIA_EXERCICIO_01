@@ -1,50 +1,71 @@
-/* Arquivo: css/style.css
-  Descrição: Estilos customizados para a landing page que complementam o TailwindCSS.
+/*
+  Arquivo: css/style.css
+  Descrição: Contém todos os estilos personalizados da página,
+             complementando o TailwindCSS.
 */
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #0D1117;
-    color: #F9FAFB;
-    /* Adicionando suavização de fonte para melhor legibilidade em alguns navegadores */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    background-color: #0D1117; /* Cor de fundo principal (dark) */
+    color: #F9FAFB; /* Cor do texto principal */
 }
 
-/* Animação de entrada para as seções */
+/* NOVO: Animação do Indicador de Scroll (Chevron) */
+@keyframes light-up {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.chevron {
+    width: 40px; /* 80px - Aumenta a largura da seta */
+    height: 40px; /* 80px - Aumenta a altura da seta */
+    color: #06b6d4; /* Cor ciano neon, a mesma do Tailwind (text-cyan-400) */
+    filter: drop-shadow(0 0 8px #06b6d4); /* Efeito de brilho neon */
+    opacity: 0;
+    animation: light-up 2s infinite;
+}
+
+
+/* Animação de entrada suave para seções */
 .swoosh-enter {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
+
 .swoosh-enter-active {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Estilos do Acordeão (conteúdo) */
+/* Estilos para o conteúdo do acordeão (sanfona) */
 .accordion-content {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-out, padding 0.5s ease-out;
-    padding: 0 1.5rem; /* Mantém o padding na transição */
+    padding: 0 1.5rem;
 }
 
-/* Efeito de hover nos botões principais (Call-to-Action) */
+/* Efeito de elevação para botões de CTA (Call to Action) */
 .cta-button {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 .cta-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 15px -3px rgba(234, 88, 12, 0.2), 0 4px 6px -2px rgba(234, 88, 12, 0.1); /* Sombra laranja */
 }
 
-/* Efeito sutil de brilho no texto destacado */
+/* Efeito de brilho para textos em destaque */
 .text-glow {
     text-shadow: 0 0 8px currentColor;
 }
 
-/* Estilos do player de vídeo de fundo */
+/* Estilos para os vídeos de fundo */
 .video-player {
     position: absolute;
     top: 50%;
@@ -57,3 +78,19 @@ body {
     object-fit: cover;
     transition: opacity 1.5s ease-in-out;
 }
+
+/* Rotação do ícone do acordeão */
+.accordion-icon.rotate-45 {
+    transform: rotate(45deg);
+}
+
+
+/* Atraso na animação para criar o efeito de cascata */
+.chevron:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.chevron:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
