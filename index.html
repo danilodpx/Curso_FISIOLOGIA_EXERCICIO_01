@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     
-    <!-- Link para nossa folha de estilos personalizada -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Link para nossa folha de estilos usando caminho relativo explícito -->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="antialiased">
 
@@ -22,11 +22,11 @@
         <header class="relative text-center mb-16 md:mb-24 swoosh-enter overflow-hidden rounded-2xl h-[60vh] md:h-[80vh] flex items-center justify-center">
             <!-- Container do Carrossel de Vídeos -->
             <div id="video-carousel" class="absolute top-0 left-0 w-full h-full z-0 bg-black">
-                 <!-- CORREÇÃO: Apontando para os vídeos na sua pasta local 'video/' -->
-                <video class="video-player opacity-100" autoplay loop muted playsinline preload="auto" poster="video/poster-01.jpg" src="video/01landfisio.mp4"></video>
-                <video class="video-player opacity-0" loop muted playsinline preload="none" poster="video/poster-02.jpg" data-src="video/02landfisio.mp4"></video>
-                <video class="video-player opacity-0" loop muted playsinline preload="none" poster="video/poster-03.jpg" data-src="video/03landfisio.mp4"></video>
-                <video class="video-player opacity-0" loop muted playsinline preload="none" poster="video/poster-04.jpg" data-src="video/04landfisio.mp4"></video>
+                 <!-- CORREÇÃO: Usando caminhos relativos explícitos (./) para os vídeos -->
+                <video class="video-player opacity-100" autoplay loop muted playsinline preload="auto" poster="./video/poster-01.jpg" src="./video/01landfisio.mp4"></video>
+                <video class="video-player opacity-0" loop muted playsinline preload="none" poster="./video/poster-02.jpg" data-src="./video/02landfisio.mp4"></video>
+                <video class="video-player opacity-0" loop muted playsinline preload="none" poster="./video/poster-03.jpg" data-src="./video/03landfisio.mp4"></video>
+                <video class="video-player opacity-0" loop muted playsinline preload="none" poster="./video/poster-04.jpg" data-src="./video/04landfisio.mp4"></video>
             </div>
             <!-- Overlay escuro para garantir a legibilidade do texto -->
             <div class="absolute top-0 left-0 w-full h-full bg-black/60 z-10"></div>
@@ -39,7 +39,7 @@
                     Um curso de capacitação completo para estudantes e recém-formados em Educação Física.
                 </p>
                 <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
-                    <a href="https://forms.gle/og1TsMP6pwYqPRZdA" target="_blank" class="cta-button w-full sm:w-auto bg-orange-600 hover:bg-orange-500 text-white font-bold py-3 px-8 rounded-lg shadow-lg">
+                    <a href="#" target="_blank" class="cta-button w-full sm:w-auto bg-orange-600 hover:bg-orange-500 text-white font-bold py-3 px-8 rounded-lg shadow-lg">
                         Inscreva-se Agora
                     </a>
                     <div class="text-gray-200 font-semibold text-lg">
@@ -104,7 +104,7 @@
                  </div>
                  <div class="text-center mt-12">
                      <p class="text-xl mb-4">Pronto para dar o próximo passo na sua carreira?</p>
-                     <a href="https://forms.gle/og1TsMP6pwYqPRZdA" target="_blank" class="cta-button w-full sm:w-auto bg-gray-900 hover:bg-gray-800 text-cyan-300 font-bold py-3 px-8 rounded-lg shadow-lg">
+                     <a href="#" target="_blank" class="cta-button w-full sm:w-auto bg-gray-900 hover:bg-gray-800 text-cyan-300 font-bold py-3 px-8 rounded-lg shadow-lg">
                          Quero Garantir Minha Vaga
                      </a>
                      <p class="mt-4 opacity-90 text-sm">Vagas limitadas para garantir a qualidade da interação.</p>
@@ -118,8 +118,8 @@
         <p>&copy; 2025 Cursos de Capacitação em Educação Física. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- Link para nosso arquivo JavaScript. 'defer' garante que ele só execute após o HTML ser lido. -->
-    <script src="js/script.js" defer></script>
+    <!-- Link para nosso arquivo JavaScript usando caminho relativo explícito -->
+    <script src="./js/script.js" defer></script>
 </body>
 </html>
 
